@@ -2,7 +2,7 @@
 // Write a simple closure of your own creation.  Keep it simple!
 
 function addTwoNums(x, y) {
-  let answer = `The total sum of two numbers is:`;
+  let answer = `The total sum is:`;
   function sumNums() {
     return answer + (x + y);
   }
