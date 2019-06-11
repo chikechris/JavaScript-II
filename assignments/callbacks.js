@@ -67,10 +67,26 @@ function multiplyNums(x, y, cb) {
 
 console.log(multiplyNums(3, 5, multiply));
 
+/****************************************** */
+function itemPresent(item, arr) {
+  for (let i = 0; i < arr.length; ++i) {
+    if (item == arr[i]) {
+      return true;
+    }
+  }
+  return false;
+}
+
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+
+  return cb(item, list);
 }
+/**returns false */
+console.log(contains("apple", items, itemPresent));
+/**return true */
+console.log(contains("Pencil", items, itemPresent));
 
 /* STRETCH PROBLEM */
 
