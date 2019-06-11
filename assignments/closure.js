@@ -1,14 +1,30 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+function addTwoNums(x, y) {
+  let answer = "The total sum is : ";
+  function sumNums() {
+    return answer + (x + y);
+  }
+  return sumNums();
+}
+
+console.log(addTwoNums(15, 65));
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
-
 // ==== Challenge 2: Create a counter function ====
+let count = 0;
 const counter = () => {
   // Return a function that when invoked increments and returns a counter variable.
+  return (function() {
+    count++;
+    console.log(count);
+  })();
 };
+
+counter();
+counter();
 // Example usage: const newCounter = counter();
 // newCounter(); // 1
 // newCounter(); // 2
