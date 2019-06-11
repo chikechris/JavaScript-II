@@ -133,3 +133,12 @@ console.log(lowCaps(runners));
 
 console.log("/********************/")
 // Problem 3
+let sShirtsID = [];
+
+
+function sShirtsIDFilter(arr) {
+  sShirtsID = arr.filter(i => i.shirt_size == 'S');
+  return sShirtsID;
+}
+
+console.log(sShirtsIDFilter(runners));
