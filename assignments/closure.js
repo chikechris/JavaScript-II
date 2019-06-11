@@ -1,16 +1,15 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
-function addTwoNums(x, y) {
-  let answer = `The total sum is:`;
-  function sumNums() {
-    return answer + (x + y);
-  }
-  return sumNums();
-}
+let addNums = function(x) {
+  let sumNum = function(y) {
+    return x + y;
+  };
+  return sumNum;
+};
 
-console.log(addTwoNums(15, 65));
-console.log(addTwoNums(15, 125));
+let addTwo = new addNums(2);
+console.log(addTwo(65));
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
